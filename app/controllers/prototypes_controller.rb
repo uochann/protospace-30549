@@ -38,10 +38,10 @@ class PrototypesController < ApplicationController
 
   def create
     prototype = Prototype.create(prototype_params)
-    if prototype.update(prototype_params)
+    if prototype.save
       redirect_to root_path
     else
-      render :index
+      render :new
     end
   end
 
