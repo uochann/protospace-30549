@@ -1,6 +1,7 @@
 class PrototypesController < ApplicationController
   before_action :authenticate_user!, only: [:show, :new, :edit, :destory, :creste]
   before_action :move_to_edit, except: [:index, :show]
+  
 
   def index
     @prototypes = Prototype.all
